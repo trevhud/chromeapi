@@ -26,4 +26,4 @@ external getZoom(num? tabId);
 external Object query(QueryInfo queryInfo);
 
 /// https://developer.chrome.com/docs/extensions/reference/tabs/#method-create
-external Object create(CreateProperties queryInfo, Function(Tab) callback);
+external Object create(CreateProperties queryInfo);
