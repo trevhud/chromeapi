@@ -58,3 +58,7 @@ Future<num> getZoom(int? tabId) => promiseToFuture<num>(_tabs.getZoom(tabId));
 Future<List<Tab?>> query(QueryInfo queryInfo) =>
     _tabs.query(queryInfo)?.toFutureList<Tab>() ??
     (throw Exception('`tabs.query` did not return a promise'));
+
+Future<List> create(
+        CreateProperties createProperties, Function(Tab) callback) =>
+    _promiseToFutureList(_tabs.create(createProperties, callback));

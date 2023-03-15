@@ -150,3 +150,23 @@ class MutedInfo {
     MutedInfoReason? reason,
   });
 }
+
+/// https://developer.chrome.com/docs/extensions/reference/tabs/#type-createProperties
+@JS()
+@anonymous
+class CreateProperties {
+  external bool? get active;
+  external num? get index;
+  external num? get openerTabId;
+  external bool? get pinned;
+  external String? get url;
+  external num? get windowId;
+
+  external factory CreateProperties(
+      {bool? active,
+      num? index,
+      num? openerTabId,
+      bool? pinned,
+      String? url,
+      num? windowId});
+}
